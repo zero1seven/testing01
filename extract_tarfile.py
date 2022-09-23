@@ -1,5 +1,6 @@
 import tarfile
 
 tarfile = "tarfile.tar"
-with open(tarfile, 'r') as f:
-	tarfile.extractall()
+file_obj = tarfile.open(filename,"r")
+file = file_obj.extractall("extracted_tar_folder")
+file_obj.close()
